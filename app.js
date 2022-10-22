@@ -12,24 +12,27 @@ function searchCharacter (character1, character2, character3){
 
     $.ajax(url1)
     .then ((info1) => {
-        console.log(info1.info)
-        console.log(info1.info.count)
-        console.log(info1.results)
+        console.log(character1)
+        console.log(info1.info.count + " total")
+        console.log(info1.info.pages + " pages")
+        console.log(info1.results[0].episode)
 
     })
 
     $.ajax(url2)
     .then ((info2) => {
-        console.log(info2.info)
-        console.log(info2.info.count)
-        console.log(info2.results)
+        console.log(character2)
+        console.log(info2.info.count + " total")
+        console.log(info2.info.pages + " pages")
+        console.log(info2.results[0].episode)
     })    
 
     $.ajax(url3)
     .then ((info3) => {
-        console.log(info3.info)
-        console.log(info3.info.count)
-        console.log(info3.results)
+        console.log(character3)
+        console.log(info3.info.count + " total")
+        console.log(info3.info.pages + " pages")
+        console.log(info3.results[0].episode)
     })
 }
 
