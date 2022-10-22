@@ -13,18 +13,42 @@ function searchCharacter (character1, character2, character3){
     let char1Episodes = []
     let char2Episodes = []
     let char3Episodes = []
+    let sharedEpisodes = []
     let $divFirstEpisodes = $(".firstEpisodes")
 
     $.ajax(url1)
     .then ((info1) => {
         console.log(character1)
-        console.log(info1.info.count + " total")
-        console.log(info1.info.pages + " pages")
-        console.log(info1.results[0].episode)
         char1Episodes = info1.results[0].episode
-        $divFirstEpisodes.append(char1Episodes)
+        console.log(char1Episodes)
+        $.ajax(url2)
+        .then((info2) => {
+            console.log(character2)
+            char2Episodes = info2.results[0].episode
+            console.log(char2Episodes)
+            $.ajax(url3)
+            .then((info3) => {
+                console.log(character3)
+                char3Episodes=info3.results[0].episode
+                console.log(char3Episodes)
+                console.log(char1Episodes.length)
+
+                for (let i=0; i < char1Episodes.length; i++){
+                    for (let j = 0; j < char2Episodes.length; j++){
+                        for (let k = 0; k < char3Episodes.length; k++){
+                            if (char1Episodes[i] === char2Episodes[j] === char3Episodes[k])
+                            // sharedEpisodes.push(char1Episodes[i])
+                            // 
+                        }
+                    }
+                }
+
+            })
+        })
+        
     })
 
+   
     // $.ajax(url2)
     // .then ((info2) => {
     //     console.log(character2)
@@ -45,7 +69,7 @@ function searchCharacter (character1, character2, character3){
     //     return char3Episodes        
     // }) 
     
-    console.log(char1Episodes)
+   
 }
 
 searchCharacter("rick", "morty", "jerry")
