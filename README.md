@@ -1,28 +1,33 @@
-#The Name of My App
+#The Rick & Morty Cross Reference Super Guide
 
-a description of my project
+![](https://play-lh.googleusercontent.com/muJvgf5wm_486p4A0kbflDjBtk3sGDcyDgDVbrBd_h-zm-34rJJURuGV3ZjmjdvYEWYsHDI2_ETC4j6Nzmvu)
+
+Utilizing the Rick & Morty API, be able to cross reference multiple characters with episodes they've been in!
 
 ### Technologies Used
 
-- tech 1
-- tech 2
-- tech 3
-- tech 4 
-- tech 5
+- jQuery
+- Javascript
+- HTML
+- CSS
 
 ### Wireframes
+![](https://i.imgur.com/ZSeiHUJ.png)
+![](https://i.imgur.com/kzOKpEe.png)
 
-![look at this frog!](https://assets.petco.com/petco/image/upload/f_auto,q_auto/green-tree-frog-care-sheet-hero)
 
 ### Daily Plan
 
 | Day | Goal | 
 |-----|------|
-| 1 | Choose API |
-| 2 | Test API and Render to Screen |
-| 3 | Create and test form |
+| 1 | Choose API, Test, and layout base JS & HTML|
+| 2 | Style CSS |
+| 3 | Create and test form element|
+| 4 | Create search logic |
+| 5 | Continue search logic |
+| 6 | Finish search logic & wrap project|
 
 
 ## Link to Project
 
-[My Project Live Page] (https://projectone-iota.vercel.app/)
+[Project Live Page] (https://rawlenightlong.github.io/projectOne/)
