@@ -14,7 +14,7 @@ function searchCharacter (character1, character2, character3){
     let char2Episodes = []
     let char3Episodes = []
     const sharedEpisodes = []
-    let $divResults = $(".results")
+    let $divResults = $("<div.results>")
 
     $.ajax(url1)
     .then ((info1) => {
@@ -37,16 +37,27 @@ function searchCharacter (character1, character2, character3){
                         for (let k = 0; k < char3Episodes.length; k++){
                             if (char1Episodes[i] === char2Episodes[j] && char1Episodes[i]=== char3Episodes[k]){
                                 sharedEpisodes.push(char1Episodes[i])
-                                $divResults.push(sharedEpisodes)
+    
                             }                           
-                        }
+                        } 
                     }
+                } 
+                
+                let episodeNameNumbers = []
+                for (episode of sharedEpisodes){
+                    $.ajax(episode)
+                    .then((data) =>{
+                        console.log(`${data.name}, ${data.episode}`)
+                    })
                 }
-            })
+            }) 
+              
         })
         
     })    
-    console.log(sharedEpisodes)
+    
+    
+
 }
 
 const $submit = $("input[type=submit]")
@@ -54,17 +65,15 @@ const $firstChar = $("input[type=text].firstChar")
 const $secondChar = $("input[type=text].secondChar")
 const $thirdChar = $("input[type=text].thirdChar")
 
-console.log($firstChar)
-console.log($secondChar)
-console.log($thirdChar)
-
-
 $submit.on("click", (event) => {
     event.preventDefault()
+
     const char1Entry = $firstChar[0].value
     const char2Entry = $secondChar[0].value
     const char3Entry = $thirdChar[0].value
     searchCharacter(char1Entry, char2Entry, char3Entry)
 })
 
-// searchCharacter("rick", "morty", "jerry")
+
+
+searchCharacter("rick", "morty", "jerry")
