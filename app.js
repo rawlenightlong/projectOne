@@ -49,17 +49,22 @@ function searchCharacter (character1, character2, character3){
     console.log(sharedEpisodes)
 }
 
-const $button = $("button")
-const $firstChar = $(".firstChar")
-const $secondChar = $(".secondChar")
-const $thirdChar = $(".thirdChar")
+const $submit = $("input[type=submit]")
+const $firstChar = $("input[type=text].firstChar")
+const $secondChar = $("input[type=text].secondChar")
+const $thirdChar = $("input[type=text].thirdChar")
 
-$button.on(("click", event => {
-    event.preventRefresh()
-    const char1Entry = $firstChar.val()
-    const char2Entry = $secondChar.val()
-    const char3Entry = $thirdChar.val()
+console.log($firstChar)
+console.log($secondChar)
+console.log($thirdChar)
+
+
+$submit.on("click", (event) => {
+    event.preventDefault()
+    const char1Entry = $firstChar[0].value
+    const char2Entry = $secondChar[0].value
+    const char3Entry = $thirdChar[0].value
     searchCharacter(char1Entry, char2Entry, char3Entry)
-}))
+})
 
-searchCharacter("rick", "morty", "jerry")
+// searchCharacter("rick", "morty", "jerry")
