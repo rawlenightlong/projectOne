@@ -10,6 +10,8 @@ Utilizing the Rick & Morty API, be able to cross reference multiple characters w
 - Javascript
 - HTML
 - CSS
+- Rick & Morty API
+
 
 ### Wireframes
 ![](https://i.imgur.com/ZSeiHUJ.png)
