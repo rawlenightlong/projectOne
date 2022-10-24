@@ -48,4 +48,12 @@ function searchCharacter (character1, character2, character3){
     console.log(sharedEpisodes)
 }
 
+const $button = $("button")
+const $firstChar = $("input.firstChar")
+
+$button.on(("click", event => {
+    event.preventRefresh
+
+}))
+
 searchCharacter("rick", "morty", "jerry")
