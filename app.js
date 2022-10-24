@@ -52,8 +52,11 @@ const $button = $("button")
 const $firstChar = $("input.firstChar")
 
 $button.on(("click", event => {
-    event.preventRefresh
-
+    event.preventRefresh()
+    const char1Entry = $("input[type=text class=firstChar]").val()
+    const char2Entry = $("input[type=text class=secondChar]").val()
+    const char3Entry = $("input[type=text class=thirdChar]").val()
+    searchCharacter(char1Entry, char2Entry, char3Entry)
 }))
 
 searchCharacter("rick", "morty", "jerry")
