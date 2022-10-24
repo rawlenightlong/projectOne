@@ -14,7 +14,7 @@ function searchCharacter (character1, character2, character3){
     let char2Episodes = []
     let char3Episodes = []
     const sharedEpisodes = []
-    let $divFirstEpisodes = $(".firstEpisodes")
+    let $divResults = $(".results")
 
     $.ajax(url1)
     .then ((info1) => {
@@ -37,6 +37,7 @@ function searchCharacter (character1, character2, character3){
                         for (let k = 0; k < char3Episodes.length; k++){
                             if (char1Episodes[i] === char2Episodes[j] && char1Episodes[i]=== char3Episodes[k]){
                                 sharedEpisodes.push(char1Episodes[i])
+                                $divResults.push(sharedEpisodes)
                             }                           
                         }
                     }
@@ -49,13 +50,15 @@ function searchCharacter (character1, character2, character3){
 }
 
 const $button = $("button")
-const $firstChar = $("input.firstChar")
+const $firstChar = $(".firstChar")
+const $secondChar = $(".secondChar")
+const $thirdChar = $(".thirdChar")
 
 $button.on(("click", event => {
     event.preventRefresh()
-    const char1Entry = $("input[type=text class=firstChar]").val()
-    const char2Entry = $("input[type=text class=secondChar]").val()
-    const char3Entry = $("input[type=text class=thirdChar]").val()
+    const char1Entry = $firstChar.val()
+    const char2Entry = $secondChar.val()
+    const char3Entry = $thirdChar.val()
     searchCharacter(char1Entry, char2Entry, char3Entry)
 }))
 
