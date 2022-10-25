@@ -48,7 +48,7 @@ function searchCharacter (character1, character2, character3){
                 for (episode of sharedEpisodes){
                     $.ajax(episode)
                     .then((data) =>{
-                        $ulResults.append(`<li>${data.name},   ${data.episode}</li>`)
+                        $ulResults.append(`<li>${data.name} ---  ${data.episode}</li>`)
                     })
                 }
             })     
