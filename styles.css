@@ -1,4 +1,26 @@
 img {
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 300px;
+}
+
+body {
+    background-color:aqua;
+    text-align: center;
+}
+
+input[type="submit"] {
+    color: red;
+    background-color: black;
+    margin: 30px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 35px;
+}
+
+ul {
+    list-style-type: none;
+    text-align:justify center;
+}
+
+h1, h3, li, h2 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
