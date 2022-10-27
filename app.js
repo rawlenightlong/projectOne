@@ -1,6 +1,8 @@
 const baseUrl = "https://rickandmortyapi.com/api/"
 
 const $ulResults = $(".results")
+const $ulEpisodeName = $(".episodeName")
+const $ulEpisodeNumber = $(".episodeNumber")
 
 function searchCharacter (character1, character2, character3){
     url1 = `${baseUrl}character/?name=${character1}`
@@ -48,7 +50,9 @@ function searchCharacter (character1, character2, character3){
                 for (episode of sharedEpisodes){
                     $.ajax(episode)
                     .then((data) =>{
-                        $ulResults.append(`<li>${data.name} ---  ${data.episode}</li>`)
+                        // $ulResults.append(`<li>${data.name} ---  ${data.episode}</li>`)
+                        $ulEpisodeName.append(`<li>${data.name}</li>`)
+                        $ulEpisodeNumber.append(`<li>${data.episode}</li>`)
                     })
                 }
             })     
@@ -64,6 +68,8 @@ const $thirdChar = $("input[type=text].thirdChar")
 $submit.on("click", (event) => {
 
     $ulResults.empty()
+    $ulEpisodeName.empty()
+    $ulEpisodeNumber.empty()
     event.preventDefault()
     const char1Entry = $firstChar[0].value
     const char2Entry = $secondChar[0].value
