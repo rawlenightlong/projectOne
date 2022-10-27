@@ -9,6 +9,8 @@ img {
 .randomEp{
     text-align: center;
     margin-bottom: 40px;
+    height: 100%;
+    padding:10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .randomEpisode{
