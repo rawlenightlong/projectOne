@@ -119,8 +119,8 @@ h1, h3, li, h2 {
     }
     .allResults {
         display: inline-block;
-        font-size: 60%;
-        margin-left:auto;
+        font-size: 50%;
+        margin-left: 10px;
         margin-right: auto;
     }
 
