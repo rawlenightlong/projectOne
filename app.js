@@ -3,6 +3,25 @@ const baseUrl = "https://rickandmortyapi.com/api/"
 const $ulResults = $(".results")
 const $ulEpisodeName = $(".episodeName")
 const $ulEpisodeNumber = $(".episodeNumber")
+const randomEpisodeURL = "https://rickandmortyapi.com/api/character?name=rick"
+const randomEp = $(".randomEp")
+const button = $(".button")
+
+
+function randomEpisode(url){
+    $.ajax(url)
+    .then((data) => {
+    let episodes = data.results[0].episode
+    let random = episodes[Math.floor(Math.random() * episodes.length)]
+    console.log(random)
+   
+    $.ajax(random)
+    .then((episode) => {
+        randomEp.append(episode.name + ", " + episode.episode)
+        })
+    })
+}
+
 
 function searchCharacter (character1, character2, character3){
     url1 = `${baseUrl}character/?name=${character1}`
@@ -78,6 +97,11 @@ $submit.on("click", (event) => {
     
 })
 
+button.on("click", event => {
+    event.preventDefault
+    randomEp.empty()
+    randomEpisode(randomEpisodeURL)
+})
 
 
 
