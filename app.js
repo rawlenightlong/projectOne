@@ -108,3 +108,10 @@ button.on("click", event => {
 // finished
 
 // searchCharacter("rick", "morty", "jerry")
+
+//for book of books{}
+//const div = div
+//const obj = object
+
+//obj.name, obj.art, obj.synopis = whatever for each
+//div.append(obj)
