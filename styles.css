@@ -62,11 +62,10 @@ h2{
 
 .allResults{
     display: inline-block;
-    width: 80%;
+    width: 100%;
     margin-left: auto;
-    margin-right: auto;
-    
-    
+    margin-right: auto;    
+    text-align: center;
 }
 
 .episodeName, .episodeNumber{
@@ -75,12 +74,12 @@ display: inline-block;
 border-radius:3px;
 border-color: black;
 border: 3px;
-margin-left: auto;
-margin-right: auto;
 }
-.episodeName {
-    justify-content: left;
+
+.episodeName{
+    text-align: left;
 }
+
 input[type="submit"] {
     color: red;
     background-color: black;
