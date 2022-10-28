@@ -43,6 +43,7 @@ function searchCharacter (character1, character2, character3){
     .then ((info1) => {
         // console.log(character1)
         char1Episodes = info1.results[0].episode
+        console.log(info1.results[0])
         // console.log(char1Episodes)
         $.ajax(url2)
         .then((info2) => {
@@ -65,7 +66,7 @@ function searchCharacter (character1, character2, character3){
                         } 
                     }
                 } 
-                console.log(sharedEpisodes)
+                // console.log(sharedEpisodes)
                 for (episode of sharedEpisodes){
                     $.ajax(episode)
                     .then((data) =>{
